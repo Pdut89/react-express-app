@@ -1,22 +1,26 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-
-const app = express();
+const morgan = require('morgan')
+const helmet = require('helmet')
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'build')));
-app.use(bodyParser.json());
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+const publicPath = path.join(__dirname, 'build')
+
+app.use(express.static(publicPath))
+app.use(morgan('tiny'))
+app.use(helmet())
 
 app.get('/api', (req, res) => {
-  res.json({name: 'MERN App API'})
+  res.json({name: 'React-Express App API'})
 })
 
 app.get('*', (req,res) => {
- res.sendFile(path.join(__dirname, 'build/index.html'));
+ res.sendFile(`${publicPath}/index.html`);
 });
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
- console.log('Listening on port', port);
+app.listen(PORT, () => {
+ console.log(`Running on port ${PORT}`);
 });
