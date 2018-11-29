@@ -1,5 +1,7 @@
 require('./config/config')
 
+console.log(process.env.MONGODB_URI)
+
 const express = require('express');
 const morgan = require('morgan')
 const helmet = require('helmet')
