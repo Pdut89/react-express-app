@@ -12,12 +12,12 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "yarn build | node server.js",
+    "start": "node index.js",
+    "heroku-postbuild": "yarn build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "react-scripts start",
-    "serve": "yarn build | nodemon server.js"
+    "dev": "react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
