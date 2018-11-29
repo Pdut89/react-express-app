@@ -12,12 +12,12 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "yarn build | nodemon server.js",
+    "start": "yarn build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "react-scripts start",
-    "serve": "yarn build | nodemon server.js"
+    "serve": "yarn build | node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
