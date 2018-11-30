@@ -19,8 +19,6 @@
     "start": "yarn build && export NODE_ENV=production && node ./server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "watch": "react-scripts start",
     "dev": "yarn build && nodemon server/server.js"
   },
   "eslintConfig": {

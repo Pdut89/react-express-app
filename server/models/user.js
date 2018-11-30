@@ -34,6 +34,9 @@ const UserSchema = new mongoose.Schema({
   }]
 })
 
+// Prevents duplication of accounts
+UserSchema.index({ email: 1 }, { unique: true})
+
 UserSchema.methods.toJSON = function() {
   const user = this
   const userObject = user.toObject()
