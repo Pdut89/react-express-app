@@ -1,6 +1,6 @@
 require('./config/config')
 
-console.log(process.env.MONGODB_URI)
+console.log(`mongo URI: ${process.env.MONGODB_URI}`)
 
 const express = require('express');
 const morgan = require('morgan')
