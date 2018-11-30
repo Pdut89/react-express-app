@@ -1,8 +1,8 @@
 require('./config/config')
-
-console.log(`mongo URI: ${process.env.MONGODB_URI}`)
+console.log(`MONGO_URI: ${process.env.MONGODB_URI}`)
 
 const express = require('express');
+const {mongoose} = require('./db/mongoose')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const path = require('path');
@@ -26,5 +26,5 @@ app.get('*', (req,res) => {
 });
 
 app.listen(PORT, () => {
- console.log(`Running on port ${PORT}`);
+ console.log(`Server unning on port ${PORT}`);
 });
