@@ -1,11 +1,13 @@
 require('./config/config')
-console.log(`MONGO_URI: ${process.env.MONGODB_URI}`)
 
 const express = require('express');
-const {mongoose} = require('./db/mongoose')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const path = require('path');
+
+// Sets DB connection
+const { mongoose } = require('./db/mongoose')
+const { authenticate } = require('./middleware/authenticate')
 
 const app = express();
 
