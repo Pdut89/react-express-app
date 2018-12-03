@@ -16,7 +16,8 @@
     "validator": "^10.9.0"
   },
   "scripts": {
-    "start": "yarn build && export NODE_ENV=production && node ./server/server.js",
+    "start": "react-scripts build",
+    "deploy": "yarn build && export NODE_ENV=production && node ./server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "dev": "yarn build && nodemon server/server.js"
