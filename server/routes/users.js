@@ -6,7 +6,7 @@ const {User} = require('../models/user')
 const { authenticate } = require('../middleware/authenticate')
 
 // Create new user
-router.post('/create', async (req, res) => {
+router.post('/add', async (req, res) => {
   try {
     const { email, password } = req.body
     const user = new User({ email, password })
@@ -31,7 +31,7 @@ router.post('/login', async (req, res) => {
 })
 
 // Get logged in user details
-router.get('/current', authenticate, (req, res) => {
+router.get('/token', authenticate, (req, res) => {
   res.send(req.user)
 })
 
