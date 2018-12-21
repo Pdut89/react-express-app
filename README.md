@@ -31,7 +31,7 @@ The build is minified and the filenames include the hashes.<br>
 ### `yarn deploy`
 
 Builds the app for production to the `build` folder.<br>
-Runs the app in the production mode.<br>
+Runs the app in production mode.<br>
 
 ## Resources
 [Run in Postman](https://app.getpostman.com/run-collection/008bfd58de32ef98b083)
