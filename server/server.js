@@ -6,9 +6,6 @@ const morgan = require('morgan')
 const helmet = require('helmet')
 const path = require('path');
 
-const { mongoose } = require('./db/mongoose')
-const { api, users } = require('./routes/')
-
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -21,13 +18,6 @@ app.use(bodyParser.json())
 app.use(express.static(publicPath))
 app.use(morgan('tiny'))
 app.use(helmet())
-
-// API Routes
-app.get('/api', (req, res) => {
-  res.json({name: 'React Express API'})
-})
-
-app.use('/api/users', users)
 
 app.get('*', (req, res) => {
  res.sendFile(`${publicPath}/index.html`);

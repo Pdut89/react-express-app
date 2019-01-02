@@ -1,17 +1,14 @@
 {
   "test" : {
     "PORT" : 3000,
-    "MONGODB_URI" : "mongodb://localhost:27017/react-express-test",
     "JWT_SECRET" : "any-key-here"
   },
   "development" : {
     "PORT" : 3000,
-    "MONGODB_URI" : "mongodb://localhost:27017/react-express-dev",
     "JWT_SECRET" : "any-key-here"
   },
   "production" : {
     "PORT" : 3000,
-    "MONGODB_URI" : "mongodb://localhost:27017/react-express-app",
     "JWT_SECRET" : "any-key-here"
   }
 }
